@@ -745,6 +745,18 @@ figcaption {
   color: var(--ink-soft);
 }
 
+.areaList a {
+  color: inherit;
+}
+
+.areaList a:hover {
+  color: var(--brand);
+}
+
+.areaHero {
+  min-height: min(72vh, 640px);
+}
+
 .faqList {
   margin-top: 1.5rem;
   display: grid;
