@@ -423,6 +423,32 @@ textarea {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.seoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.seoGrid article {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.seoGrid h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.seoGrid p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
 .includeBox {
   margin-top: 2rem;
   background: linear-gradient(135deg, #fff 0%, var(--accent-soft) 100%);
@@ -996,7 +1022,8 @@ figcaption {
   .strengthGrid,
   .reviewGrid,
   .baGrid,
-  .processGrid {
+  .processGrid,
+  .seoGrid {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -1068,6 +1095,7 @@ figcaption {
   .impactGrid,
   .statGrid,
   .strengthGrid,
+  .seoGrid,
   .reviewGrid,
   .reviewGridAll,
   .reviewPhotos,
