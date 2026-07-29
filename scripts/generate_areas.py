@@ -66,6 +66,9 @@ def page_html(name, slug, note):
   <meta name="keywords" content="{name} 매트리스청소, {name} 매트리스냄새제거, {name} 침대청소, {name} 개오줌냄새제거, {name} 소파청소, 김해 매트리스청소, 리프레시홈 김해">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="{BASE}/areas/{slug}.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta property="og:title" content="{title}">
   <meta property="og:description" content="{desc}">
   <meta property="og:type" content="website">
@@ -301,13 +304,6 @@ def main():
     sitemap.append("")
     (ROOT / "sitemap.xml").write_text("\n".join(sitemap), encoding="utf-8")
     print("wrote sitemap.xml")
-
-    # area links snippet for manual check
-    links = "\n".join(
-        f'          <li><a href="/areas/{slug}.html">{name}</a></li>'
-        for name, slug, _ in AREAS
-    )
-    (AREAS_DIR / "_area-links.html").write_text(links + "\n", encoding="utf-8")
     print("done", len(AREAS), "areas")
 
 
