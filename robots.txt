@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.gimhae.refreshhome.co.kr/sitemap.xml
