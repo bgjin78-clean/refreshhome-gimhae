@@ -1,0 +1,35 @@
+[
+  {
+    "id": "2026-07-20-jangyu",
+    "date": "2026-07-20",
+    "area": "장유",
+    "service": "매트리스 클리닝",
+    "title": "김해 장유 매트리스 클리닝",
+    "text": "아이 있는 집이라 걱정이었는데, 청소 후 냄새가 확 달라졌어요.",
+    "name": "김○○",
+    "before": "/images/ba-mattress-1.png",
+    "after": ""
+  },
+  {
+    "id": "2026-07-15-naeoe",
+    "date": "2026-07-15",
+    "area": "내외동",
+    "service": "매트리스 클리닝",
+    "title": "김해 내외동 매트리스 클리닝",
+    "text": "10년 된 매트리스가 새것처럼 깨끗해졌습니다.",
+    "name": "박○○",
+    "before": "/images/ba-mattress-2.png",
+    "after": ""
+  },
+  {
+    "id": "2026-07-10-samgye",
+    "date": "2026-07-10",
+    "area": "삼계동",
+    "service": "매트리스+소파",
+    "title": "김해 삼계동 매트리스·소파 클리닝",
+    "text": "소파·매트리스 함께 맡겼는데 친절하고 꼼꼼했어요.",
+    "name": "이○○",
+    "before": "/images/ba-sofa-1.png",
+    "after": "/images/ba-sofa-2.png"
+  }
+]

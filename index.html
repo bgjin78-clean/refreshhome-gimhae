@@ -1,19 +1,498 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>김해 매트리스·소파 클리닝 | 리프레시홈 김해</title>
+  <meta name="description" content="김해 매트리스·소파·카페트 전문 클리닝. 진드기·세균 제거, 현미경 진단, 당일 출장 가능. 리프레시홈 김해 010-4026-0892">
+  <meta name="keywords" content="김해 매트리스 청소, 김해 소파 클리닝, 장유 매트리스 청소, 김해 카페트 청소, 리프레시홈 김해">
+  <link rel="canonical" href="/">
+  <meta property="og:title" content="김해 매트리스·소파 클리닝 | 리프레시홈 김해">
+  <meta property="og:description" content="김해 전역 매트리스·소파 전문 클리닝. 진드기·세균 제거, 당일 출장. 010-4026-0892">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Lotto Number Generator</h1>
-        <p>Click the button to generate your lucky numbers!</p>
-        <div class="numbers-group"></div>
-        <button id="generate">Generate Numbers</button>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="logo" href="/">리프레시홈 <span>김해</span></a>
+      <nav class="navlinks" aria-label="주요 메뉴">
+        <a href="#why">왜 청소?</a>
+        <a href="#price">가격</a>
+        <a href="#process">과정</a>
+        <a href="#reviews">후기</a>
+        <a href="#areas">지역</a>
+        <a href="#consult">예약접수</a>
+      </nav>
+      <a class="call" href="tel:010-4026-0892">010-4026-0892</a>
+      <button class="navToggle" type="button" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <script src="main.js"></script>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="heroBg" aria-hidden="true">
+        <img src="images/hero.png" alt="" width="1600" height="900" fetchpriority="high">
+      </div>
+      <div class="container heroInner">
+        <p class="brandMark">리프레시홈 김해</p>
+        <h1>김해 매트리스·소파<br>전문 클리닝</h1>
+        <p class="heroLead">진드기·곰팡이·먼지까지, 전문 장비로 깨끗하게.</p>
+        <div class="heroBtns">
+          <a class="btn primary" href="tel:010-4026-0892">전화상담 010-4026-0892</a>
+          <a class="btn secondary" href="#consult">예약접수</a>
+        </div>
+        <ul class="heroPoints">
+          <li><strong>99.9%</strong><span>살균·항균</span></li>
+          <li><strong>친환경</strong><span>인체 무해 세제</span></li>
+          <li><strong>당일</strong><span>빠른 출장 시공</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section symptoms" id="symptoms">
+      <div class="container">
+        <p class="eyebrow">CHECK</p>
+        <h2>이런 증상, 있으신가요?</h2>
+        <p class="lead">해당되면 매트리스·소파 케어를 권합니다.</p>
+        <div class="symptomGrid">
+          <button type="button" class="symptom" data-symptom>아침에 코막힘·재채기가 나온다</button>
+          <button type="button" class="symptom" data-symptom>아이가 피부를 자주 긁는다</button>
+          <button type="button" class="symptom" data-symptom>매트리스에서 냄새가 난다</button>
+          <button type="button" class="symptom" data-symptom>소파에 반려동물 털이 안 빠진다</button>
+          <button type="button" class="symptom" data-symptom>카펫에서 먼지가 올라온다</button>
+          <button type="button" class="symptom" data-symptom>세탁해도 찝찝함이 남는다</button>
+          <button type="button" class="symptom" data-symptom>가족 중 비염·아토피가 있다</button>
+          <button type="button" class="symptom" data-symptom>소파에 얼룩이 번지고 있다</button>
+        </div>
+        <p class="symptomHint" id="symptomHint" hidden>증상이 있다면 전문 클리닝으로 내부 오염부터 관리하세요.</p>
+      </div>
+    </section>
+
+    <section class="section why" id="why">
+      <div class="container">
+        <p class="eyebrow">WHY</p>
+        <h2>오염된 매트리스,<br>건강에 미치는 영향</h2>
+        <p class="lead">매일 쓰지만 관리가 가장 소홀한 가구입니다.</p>
+        <div class="impactGrid">
+          <article>
+            <h3>알레르기 비염</h3>
+            <p>진드기 배설물이 코 점막을 자극합니다.</p>
+          </article>
+          <article>
+            <h3>아토피 피부염</h3>
+            <p>오염된 침구 접촉이 피부를 자극합니다.</p>
+          </article>
+          <article>
+            <h3>천식 악화</h3>
+            <p>미세먼지·곰팡이가 기관지를 자극합니다.</p>
+          </article>
+          <article>
+            <h3>수면의 질 저하</h3>
+            <p>오염된 환경이 깊은 수면을 방해합니다.</p>
+          </article>
+        </div>
+        <div class="statGrid">
+          <article>
+            <h3>집먼지 진드기</h3>
+            <p class="stat">약 200만 마리</p>
+            <p>평균 매트리스 서식량 · 알레르기 주범</p>
+          </article>
+          <article>
+            <h3>땀과 체액</h3>
+            <p class="stat">연간 약 100L</p>
+            <p>수면 중 매트리스에 흡수되는 양</p>
+          </article>
+          <article>
+            <h3>곰팡이 포자</h3>
+            <p class="stat">습한 환경 번식</p>
+            <p>내부 습기가 번식의 최적 조건</p>
+          </article>
+          <article>
+            <h3>미세먼지 축적</h3>
+            <p class="stat">눈에 안 보이는 위험</p>
+            <p>침구를 통과해 깊숙이 쌓입니다</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section strength" id="strength">
+      <div class="container">
+        <p class="eyebrow">CARE</p>
+        <h2>겉만 닦는 청소가 아닌<br>내부 오염까지 제거</h2>
+        <p class="lead">스팀·흡입·현미경 진단으로 섬유 속까지 관리합니다.</p>
+        <div class="strengthGrid">
+          <article>
+            <h3>스팀·흡입 딥클리닝</h3>
+            <p>깊숙한 진드기·세균·알레르기 물질을 제거합니다.</p>
+          </article>
+          <article>
+            <h3>현미경 오염 진단</h3>
+            <p>보이지 않는 내부 오염을 확인하고 맞춤 케어합니다.</p>
+          </article>
+          <article>
+            <h3>항균·피톤치드 케어</h3>
+            <p>세균 99.9% 제거 · 아이·반려동물 가정에도 안심</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section price" id="price">
+      <div class="container">
+        <p class="eyebrow">PRICE</p>
+        <h2>매트리스 &amp; 소파 가격표</h2>
+        <p class="lead">베이직=건식 / 프리미엄=건식+습식 · 항균·피톤치드·진드기 패치 기본 포함</p>
+
+        <div class="includeBox">
+          <h3>기본 서비스 포함</h3>
+          <ul>
+            <li><strong>항균 소독</strong> — 유해 세균 99.9% 제거</li>
+            <li><strong>피톤치드 소독</strong> — 천연 항균·탈취</li>
+            <li><strong>진드기 패치</strong> — 서식 여부 확인용 제공</li>
+          </ul>
+          <p class="includeNote">추가 비용 없이 기본 제공</p>
+        </div>
+
+        <div class="priceBlock">
+          <h3>매트리스 클리닝</h3>
+          <div class="tableWrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>품목</th>
+                  <th>베이직 (건식)</th>
+                  <th>프리미엄 (건식+습식)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>싱글 / 슈퍼싱글</td>
+                  <td>39,000원</td>
+                  <td>79,000원 <small>뒷면 +10,000</small></td>
+                </tr>
+                <tr>
+                  <td>더블 / 퀸</td>
+                  <td>49,000원</td>
+                  <td>99,000원 <small>뒷면 +10,000</small></td>
+                </tr>
+                <tr>
+                  <td>킹 / 라지킹</td>
+                  <td>59,000원</td>
+                  <td>119,000원 <small>뒷면 +10,000</small></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="priceBlock">
+          <h3>소파 클리닝</h3>
+          <div class="tableWrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>품목</th>
+                  <th>베이직 (건식)</th>
+                  <th>프리미엄 (건식+습식)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>소파 3인</td>
+                  <td>60,000원</td>
+                  <td>100,000원</td>
+                </tr>
+                <tr>
+                  <td>소파 4인</td>
+                  <td>70,000원</td>
+                  <td>115,000원</td>
+                </tr>
+                <tr>
+                  <td>소파 5인</td>
+                  <td>80,000원</td>
+                  <td>130,000원</td>
+                </tr>
+                <tr>
+                  <td>소파 6인</td>
+                  <td>90,000원</td>
+                  <td>145,000원</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <p class="priceNote">카페트는 면적별 견적 · 상담으로 안내드립니다.</p>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="container">
+        <p class="eyebrow">PROCESS</p>
+        <h2>8단계 딥클리닝</h2>
+        <p class="lead">전문 장비로 매트리스 깊숙한 진드기까지 제거합니다.</p>
+        <ol class="processGrid">
+          <li>
+            <img src="images/step-01.png" alt="오염도 측정" width="640" height="640" loading="lazy">
+            <span class="num">01</span>
+            <h3>오염도 측정</h3>
+            <p>현재 오염 상태를 직접 확인</p>
+          </li>
+          <li>
+            <img src="images/step-02.png" alt="프레임 주변 청소" width="640" height="640" loading="lazy">
+            <span class="num">02</span>
+            <h3>프레임 주변 청소</h3>
+            <p>프레임 및 주변부 먼지 제거</p>
+          </li>
+          <li>
+            <img src="images/step-03.png" alt="건식 진공 청소" width="640" height="640" loading="lazy">
+            <span class="num">03</span>
+            <h3>건식 진공 청소</h3>
+            <p>깊숙한 먼지·진드기 제거</p>
+          </li>
+          <li>
+            <img src="images/step-04.png" alt="고온 스팀 살균" width="640" height="640" loading="lazy">
+            <span class="num">04</span>
+            <h3>고온 스팀 살균</h3>
+            <p>99% 살균 효과</p>
+          </li>
+          <li>
+            <img src="images/step-05.png" alt="오염물 확인" width="640" height="640" loading="lazy">
+            <span class="num">05</span>
+            <h3>오염물 확인</h3>
+            <p>청소 후 결과를 현미경으로 확인</p>
+          </li>
+          <li>
+            <img src="images/step-06.png" alt="항균 케어" width="640" height="640" loading="lazy">
+            <span class="num">06</span>
+            <h3>항균 케어</h3>
+            <p>세균 재번식 방지</p>
+          </li>
+          <li>
+            <img src="images/step-07.png" alt="피톤치드 소독" width="640" height="640" loading="lazy">
+            <span class="num">07</span>
+            <h3>피톤치드 소독</h3>
+            <p>자연 항균·탈취 효과</p>
+          </li>
+          <li>
+            <img src="images/step-08.png" alt="진드기 시트" width="640" height="640" loading="lazy">
+            <span class="num">08</span>
+            <h3>진드기 시트</h3>
+            <p>진드기 시트 부착</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section beforeAfter" id="before-after">
+      <div class="container">
+        <p class="eyebrow">BEFORE &amp; AFTER</p>
+        <h2>청소 전·후 비교</h2>
+        <p class="lead">클리닝 전후 차이를 확인하세요.</p>
+        <div class="baGrid">
+          <figure>
+            <img src="images/ba-mattress-1.png" alt="매트리스 클리닝 전후 비교" width="1200" height="675" loading="lazy">
+            <figcaption>매트리스 얼룩 제거</figcaption>
+          </figure>
+          <figure>
+            <img src="images/ba-mattress-2.png" alt="매트리스 딥클리닝 전후 비교" width="1200" height="675" loading="lazy">
+            <figcaption>매트리스 딥클리닝</figcaption>
+          </figure>
+          <figure>
+            <img src="images/ba-sofa-1.png" alt="소파 클리닝 전후 비교" width="1200" height="675" loading="lazy">
+            <figcaption>패브릭 소파 클리닝</figcaption>
+          </figure>
+          <figure>
+            <img src="images/ba-sofa-2.png" alt="소파 얼룩 제거 전후 비교" width="1200" height="675" loading="lazy">
+            <figcaption>소파 얼룩 제거</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <p class="eyebrow">REVIEWS</p>
+        <h2>김해 작업후기</h2>
+        <p class="lead">최근 시공 사례와 고객 후기입니다. JSON으로 계속 추가할 수 있습니다.</p>
+        <div class="reviewGrid" id="reviewList"></div>
+        <div class="reviewMore">
+          <a class="btn secondary dark" href="reviews/">작업후기 전체 보기</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section areas" id="areas">
+      <div class="container">
+        <p class="eyebrow">AREA</p>
+        <h2>김해 서비스 지역</h2>
+        <p class="lead">김해 전역 출장 가능 · 장유·시내·읍면 상담</p>
+        <ul class="areaList">
+          <li>장유</li>
+          <li>내외동</li>
+          <li>삼계동</li>
+          <li>부원동</li>
+          <li>활천동</li>
+          <li>불암동</li>
+          <li>대청동</li>
+          <li>칠산서부동</li>
+          <li>회현동</li>
+          <li>진영읍</li>
+          <li>주촌면</li>
+          <li>진례면</li>
+          <li>한림면</li>
+          <li>생림면</li>
+          <li>상동면</li>
+          <li>대동면</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container">
+        <p class="eyebrow">FAQ</p>
+        <h2>자주 묻는 질문</h2>
+        <p class="lead">궁금한 점은 언제든 문의해 주세요.</p>
+        <div class="faqList">
+          <details>
+            <summary>청소 시간은 얼마나 걸리나요?</summary>
+            <p>매트리스 약 40분~1시간, 소파 약 1~2시간입니다.</p>
+          </details>
+          <details>
+            <summary>집에 계속 있어야 하나요?</summary>
+            <p>시작·마무리 확인 때만 계시면 됩니다.</p>
+          </details>
+          <details>
+            <summary>아이·반려동물이 있어도 안전한가요?</summary>
+            <p>친환경 세제·항균·피톤치드 케어로 안심입니다.</p>
+          </details>
+          <details>
+            <summary>얼마나 자주 청소해야 하나요?</summary>
+            <p>보통 6개월~1년에 한 번을 권합니다.</p>
+          </details>
+          <details>
+            <summary>김해 당일 예약도 가능한가요?</summary>
+            <p>예약 상황에 따라 당일·익일 가능합니다.</p>
+          </details>
+          <details>
+            <summary>얼룩이 100% 제거되나요?</summary>
+            <p>대부분 개선되나, 오래된 오염은 현장 안내드립니다.</p>
+          </details>
+          <details>
+            <summary>준비할 것이 있나요?</summary>
+            <p>이불·시트·소파 위 물건만 치워 주세요.</p>
+          </details>
+          <details>
+            <summary>결제는 어떻게 하나요?</summary>
+            <p>현금·카드·계좌이체, 작업 후 결제입니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section consult" id="consult">
+      <div class="container">
+        <div class="formWrap">
+          <p class="eyebrow">RESERVE</p>
+          <h2>김해 클리닝 예약접수</h2>
+          <p class="lead">성함·연락처·주소·희망 서비스를 남겨 주세요. 확인 후 연락드립니다.</p>
+
+          <form class="consultForm">
+            <input type="hidden" name="title" value="[리프레시홈 김해] 예약접수">
+            <input type="hidden" name="site_name" value="리프레시홈 김해">
+            <input type="hidden" name="region" value="김해">
+
+            <div class="formGrid">
+              <div class="field">
+                <label for="name">성함</label>
+                <input id="name" name="name" placeholder="예: 홍길동" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="phone">연락처</label>
+                <input id="phone" name="phone" placeholder="예: 010-0000-0000" autocomplete="tel" required>
+              </div>
+              <div class="field">
+                <label for="service">요청 서비스</label>
+                <select id="service" name="service">
+                  <option value="매트리스 클리닝">매트리스 클리닝</option>
+                  <option value="소파 클리닝">소파 클리닝</option>
+                  <option value="카페트 클리닝">카페트 클리닝</option>
+                  <option value="매트리스+소파">매트리스+소파</option>
+                  <option value="기타 상담">기타 상담</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="address">현장 주소</label>
+                <input id="address" name="address" placeholder="예: 김해 장유 / ○○동" required>
+              </div>
+              <div class="field full">
+                <label for="message">상담 내용</label>
+                <textarea id="message" name="message" rows="4" placeholder="매트리스 사이즈, 소파 인원, 희망 일정 등을 남겨 주세요."></textarea>
+              </div>
+            </div>
+
+            <label class="agree">
+              <input type="checkbox" name="agree" value="yes">
+              <span>상담 안내를 위한 개인정보 수집 및 이용에 동의합니다.</span>
+            </label>
+
+            <button class="btn primary submitBtn" type="submit">예약 접수하기</button>
+            <div class="status" aria-live="polite"></div>
+          </form>
+
+          <div class="consultAlt">
+            <a class="altLink" href="tel:010-4026-0892">
+              <strong>전화 상담</strong>
+              <span>010-4026-0892</span>
+            </a>
+            <a class="altLink" href="https://open.kakao.com/o/sig1WPki" target="_blank" rel="noopener noreferrer">
+              <strong>카카오톡 상담</strong>
+              <span>오픈채팅 · 24시간 접수</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <strong>리프레시홈 김해</strong>
+      <p>매트리스 · 소파 · 카페트 전문 청소 서비스</p>
+      <p>상담전화 <a href="tel:010-4026-0892">010-4026-0892</a></p>
+      <p class="copy">© 2026 리프레시홈 김해. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="mobileQuick">
+    <a href="tel:010-4026-0892">전화상담</a>
+    <a href="#consult">예약접수</a>
+  </div>
+
+  <!-- 이벤트 팝업: EVENT_POPUP_ENABLED=true 이고 내용이 있을 때만 표시 -->
+  <div class="eventPopup" id="eventPopup" hidden aria-hidden="true">
+    <div class="eventPopupBackdrop" data-close-popup></div>
+    <div class="eventPopupPanel" role="dialog" aria-modal="true" aria-labelledby="eventPopupTitle">
+      <button type="button" class="eventPopupClose" data-close-popup aria-label="닫기">×</button>
+      <p class="eventPopupEyebrow">EVENT</p>
+      <h2 id="eventPopupTitle">이벤트 제목</h2>
+      <p class="eventPopupBody">이벤트 내용을 여기에 작성합니다.</p>
+      <div class="eventPopupActions">
+        <a class="btn primary" href="#consult" data-close-popup>지금 예약하기</a>
+        <button type="button" class="btn ghost" data-hide-today>오늘 하루 보지 않기</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="reviews.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
