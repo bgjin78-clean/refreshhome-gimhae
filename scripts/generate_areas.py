@@ -102,7 +102,10 @@ def page_html(name, slug, note):
 <body>
   <header class="topbar">
     <div class="container nav">
-      <a class="logo" href="/">리프레시홈 <span>김해</span></a>
+      <a class="logo" href="/">
+        <img class="logoMark" src="/favicon-32.png" alt="" width="32" height="32">
+        리프레시홈 <span>김해</span>
+      </a>
       <nav class="navlinks" aria-label="주요 메뉴">
         <a href="/#services">서비스</a>
         <a href="/#price">가격</a>
