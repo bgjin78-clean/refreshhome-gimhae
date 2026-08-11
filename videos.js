@@ -13,7 +13,7 @@
  */
 
 const VIDEOS_JSON_URL = "/data/videos.json";
-const HOME_VIDEO_LIMIT = 1;
+const HOME_VIDEO_LIMIT = 6;
 
 function escapeVideoHtml(value) {
   return String(value || "")
@@ -26,7 +26,7 @@ function escapeVideoHtml(value) {
 function youtubeId(value) {
   const raw = String(value || "").trim();
   if (!raw) return "";
-  const match = raw.match(/(?:youtu\.be\/|v=|embed\/)([A-Za-z0-9_-]{6,})/);
+  const match = raw.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([A-Za-z0-9_-]{6,})/);
   return match ? match[1] : raw;
 }
 
@@ -35,8 +35,9 @@ function videoCardHtml(item) {
   if (!id) return "";
   const title = escapeVideoHtml(item.title || "작업 영상");
   const text = escapeVideoHtml(item.text || "");
+  const kind = item.type === "shorts" ? " shorts" : "";
 
-  return `<article class="videoCard">
+  return `<article class="videoCard${kind}">
     <div class="videoFrame">
       <iframe
         src="https://www.youtube-nocookie.com/embed/${escapeVideoHtml(id)}"

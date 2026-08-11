@@ -733,14 +733,27 @@ figcaption {
 
 .videoList {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.2rem;
+  align-items: start;
   margin-top: 1.6rem;
 }
 
-.videoCard {
+.videoList:has(.videoCard:only-child) {
+  grid-template-columns: 1fr;
   max-width: 860px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.videoCard {
   width: 100%;
+}
+
+.videoCard.shorts .videoFrame {
+  aspect-ratio: 9 / 16;
+  max-width: 360px;
+  margin: 0 auto;
 }
 
 .videoFrame {
@@ -1127,6 +1140,10 @@ figcaption {
   .nav.menu-open .navlinks a {
     padding: 0.85rem 0.2rem;
     border-bottom: 1px solid var(--line);
+  }
+
+  .videoList {
+    grid-template-columns: 1fr;
   }
 
   .hero {
