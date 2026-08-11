@@ -97,6 +97,21 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "리프레쉬 홈 매트리스청소",
+    "description": "김해 매트리스청소 실제 작업 과정을 영상으로 확인하세요.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/uPZAKHprA7U/hqdefault.jpg",
+    "embedUrl": "https://www.youtube.com/embed/uPZAKHprA7U",
+    "contentUrl": "https://youtu.be/uPZAKHprA7U",
+    "publisher": {
+      "@type": "LocalBusiness",
+      "name": "리프레시홈 김해"
+    }
+  }
+  </script>
 </head>
 <body>
   <header class="topbar">
@@ -109,6 +124,7 @@
         <a href="#services">서비스</a>
         <a href="#price">가격</a>
         <a href="#process">과정</a>
+        <a href="#video">영상</a>
         <a href="#reviews">후기</a>
         <a href="#areas">지역</a>
         <a href="#consult">예약접수</a>
@@ -437,6 +453,15 @@
       </div>
     </section>
 
+    <section class="section workVideo" id="video">
+      <div class="container">
+        <p class="eyebrow">VIDEO</p>
+        <h2>김해 작업 영상</h2>
+        <p class="lead">실제 매트리스청소 과정을 영상으로 확인하세요.</p>
+        <div class="videoList" id="videoList"></div>
+      </div>
+    </section>
+
     <section class="section reviews" id="reviews">
       <div class="container">
         <p class="eyebrow">REVIEWS</p>
@@ -620,6 +645,7 @@
   </div>
 
   <script src="reviews.js"></script>
+  <script src="videos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

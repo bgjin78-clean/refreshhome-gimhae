@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupConsultForms();
   setupEventPopup();
   if (typeof setupReviews === "function") setupReviews();
+  if (typeof setupVideos === "function") setupVideos();
 });
 
 function setupNav() {
