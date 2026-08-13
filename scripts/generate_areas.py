@@ -266,6 +266,7 @@ def page_html(name, slug, note):
       <strong>리프레시홈 김해 · {name}</strong>
       <p>{name} 매트리스청소 · 매트리스냄새제거 · 침대청소 · 개오줌냄새제거 · 소파청소</p>
       <p>상담전화 <a href="tel:{PHONE}">{PHONE}</a></p>
+      <p><a href="/guide/">김해 매트리스청소 업체 안내</a></p>
       <p class="copy">© 2026 리프레시홈 김해. All rights reserved.</p>
     </div>
   </footer>
@@ -292,6 +293,7 @@ def main():
     # sitemap
     urls = [
         ("/", "1.0"),
+        ("/guide/", "0.9"),
         ("/reviews/", "0.8"),
     ] + [(f"/areas/{slug}.html", "0.7") for _, slug, _ in AREAS]
 

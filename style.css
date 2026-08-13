@@ -716,7 +716,9 @@ figcaption {
 .reviewMore {
   margin-top: 1.5rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 0.6rem;
 }
 
 .btn.secondary.dark {
@@ -729,6 +731,51 @@ figcaption {
   margin: 0;
   font-size: clamp(2rem, 5vw, 2.8rem);
   letter-spacing: -0.035em;
+}
+
+.guidePage h2 {
+  margin: 2.4rem 0 0.8rem;
+  font-size: clamp(1.45rem, 3vw, 1.85rem);
+}
+
+.guideCopy {
+  max-width: 40rem;
+  margin-top: 1rem;
+}
+
+.guideCopy p {
+  margin: 0 0 0.85rem;
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.guideFacts {
+  display: grid;
+  gap: 1rem;
+  margin: 1.8rem 0 0;
+}
+
+.guideFacts div {
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.guideFacts dt {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--brand);
+}
+
+.guideFacts dd {
+  margin: 0.25rem 0 0;
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+}
+
+.reviewMore .btn + .btn {
+  margin-left: 0;
 }
 
 .videoList {
