@@ -13,6 +13,24 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.gimhae.refreshhome.co.kr/guide/price.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.gimhae.refreshhome.co.kr/guide/odor.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.gimhae.refreshhome.co.kr/guide/jangyu.html</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://www.gimhae.refreshhome.co.kr/reviews/</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>

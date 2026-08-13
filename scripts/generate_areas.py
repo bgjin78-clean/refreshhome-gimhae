@@ -294,6 +294,9 @@ def main():
     urls = [
         ("/", "1.0"),
         ("/guide/", "0.9"),
+        ("/guide/price.html", "0.85"),
+        ("/guide/odor.html", "0.85"),
+        ("/guide/jangyu.html", "0.85"),
         ("/reviews/", "0.8"),
     ] + [(f"/areas/{slug}.html", "0.7") for _, slug, _ in AREAS]
 
